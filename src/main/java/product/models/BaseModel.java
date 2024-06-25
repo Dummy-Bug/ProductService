@@ -1,11 +1,15 @@
 package product.models;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
-import org.springframework.data.annotation.Id;
 
 import java.util.Date;
 
 @Data
+@MappedSuperclass
 public abstract class BaseModel {
     @Id
     private Long id;

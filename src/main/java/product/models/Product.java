@@ -1,5 +1,8 @@
 package product.models;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Product extends BaseModel {
     private String title;
     private String description;

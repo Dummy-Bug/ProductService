@@ -4,27 +4,29 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import product.commons.ProductService;
 import product.dtos.ProductDto;
-import product.helpers.DBStoreProductHelper;
+import product.helpers.DbStoreProductHelper;
+import product.helpers.FakeStoreProductHelper;
 
 import java.util.List;
+import java.util.Objects;
 
 @Service("dbStoreProductService")
 //@Primary
-public class DataBaseProductService implements ProductService{
-    DBStoreProductHelper DBStoreProductHelper;
+public class DbStoreProductService implements ProductService {
+    DbStoreProductHelper DbStoreProductHelper;
 
     @Autowired
-    public DataBaseProductService(DBStoreProductHelper DBStoreProductHelper) {
-        this.DBStoreProductHelper = DBStoreProductHelper;
+    public DbStoreProductService(DbStoreProductHelper DbStoreProductHelper) {
+        this.DbStoreProductHelper = Objects.requireNonNull(DbStoreProductHelper);
     }
 
     public List<ProductDto> getAllProducts() {
-        return DBStoreProductHelper.getAllProducts();
+        return DbStoreProductHelper.getAllProducts();
     }
 
     @Override
     public ProductDto getProductById(long id) throws Exception {
-        return DBStoreProductHelper.getProductById(id);
+        return DbStoreProductHelper.getProductById(id);
     }
 
     @Override

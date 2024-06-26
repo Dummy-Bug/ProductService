@@ -1,19 +1,19 @@
 package product.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
-@Data
-public class Product extends BaseModel {
-    private String title;
-    private String description;
-    private double price;
-    private String image;
-    private int qty;
-    private int numberOfOrders;
+import java.util.List;
 
+@Data
+@Entity(name = "product")
+@PrimaryKeyJoinColumn(name = "base_table_id")
+public class Product extends Base {
+    String title;
+    String price;
+    String description;
     @ManyToOne()
     private Category category;
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    List<Image> images;
 }

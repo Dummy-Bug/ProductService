@@ -6,7 +6,7 @@ import product.dtos.ProductDto;
 import java.util.List;
 
 @Component
-public class DBStoreProductHelper {
+public class DbStoreProductHelper {
     public List<ProductDto> getAllProducts() {
         System.out.println("Reached Helper");
         return null;

@@ -1,11 +1,13 @@
 package product.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import product.commons.ProductService;
 import product.dtos.ProductDto;
 
 import java.util.List;
+import java.util.Objects;
 
 @RestController
 @RequestMapping(value = "/products", produces = "application/json")
@@ -14,8 +16,8 @@ public class ProductController {
     private final ProductService productService;
 
     @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
+    public ProductController(@Qualifier("dbStoreProductService") ProductService productService) {
+        this.productService = Objects.requireNonNull(productService);
     }
 
     @GetMapping(produces = "application/json")

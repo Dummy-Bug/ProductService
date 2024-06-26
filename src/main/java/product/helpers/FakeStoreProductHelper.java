@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import product.dtos.ProductDto;
 
 import java.util.List;
+import java.util.Objects;
 
 @Component
 public class FakeStoreProductHelper {
@@ -18,8 +19,8 @@ public class FakeStoreProductHelper {
 
     @Autowired
     public FakeStoreProductHelper(OkHttpClient okHttpClient, ObjectMapper objectMapper) {
-        this.okHttpClient = okHttpClient;
-        this.objectMapper = objectMapper;
+        this.okHttpClient = Objects.requireNonNull(okHttpClient);
+        this.objectMapper = Objects.requireNonNull(objectMapper);
     }
 
 
@@ -34,6 +35,6 @@ public class FakeStoreProductHelper {
                 .url(String.format("https://fakestoreapi.com/products/%s", id))
                 .build();
         Response response = okHttpClient.newCall(request).execute();
-        return objectMapper.readValue(response.body().string(), ProductDto.class);
+        return objectMapper.readValue(Objects.requireNonNull(response.body()).string(), ProductDto.class);
     }
 }

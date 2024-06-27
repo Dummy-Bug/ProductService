@@ -21,7 +21,7 @@ public class ProductController {
     }
 
     @GetMapping(produces = "application/json")
-    public List<ProductDto> getAllProducts() {
+    public List<ProductDto> getAllProducts() throws Exception {
         return productService.getAllProducts();
     }
 

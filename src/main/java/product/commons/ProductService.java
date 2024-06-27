@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.List;
 
 public interface ProductService {
-    List<ProductDto> getAllProducts();
+    List<ProductDto> getAllProducts() throws Exception;
 
     ProductDto getProductById(long id) throws Exception;
 

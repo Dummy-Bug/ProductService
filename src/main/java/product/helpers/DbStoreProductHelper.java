@@ -11,6 +11,7 @@ import product.repository.ProductRepository;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Component
 public class DbStoreProductHelper {
@@ -26,11 +27,17 @@ public class DbStoreProductHelper {
     }
 
     public List<ProductDto> getAllProducts() {
-        System.out.println("Reached Helper");
-        return null;
+        List<Product> products = productRepository.findAll();
+        return products.stream()
+                .map(product -> modelMapper.map(product, ProductDto.class))
+                .collect(Collectors.toList());
     }
 
     public ProductDto getProductById(Long id) throws Exception {
         return modelMapper.map(productRepository.findById(id), ProductDto.class);
+    }
+
+    public ProductDto addProduct(Product product) {
+        return modelMapper.map(productRepository.save(product),ProductDto.class);
     }
 }

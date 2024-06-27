@@ -17,7 +17,7 @@ public class FakeStoreProductService implements ProductService {
         this.fakeStoreProductHelper = fakeStoreProductHelper;
     }
 
-    public List<ProductDto> getAllProducts() {
+    public List<ProductDto> getAllProducts() throws Exception {
         return fakeStoreProductHelper.getAllProducts();
     }
 

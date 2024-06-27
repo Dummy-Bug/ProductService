@@ -3,20 +3,24 @@ package product.models;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
 @JsonIgnoreProperties
 @Entity(name = "image")
-@PrimaryKeyJoinColumn(name = "base_table_id")
-public class Image extends Base {
+public class Image {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "image_id")
+    private long imageId;
+
+    @Column(name = "image_url")
     private String imageUrl;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.LAZY)
     private Product product;
 
     @JsonCreator

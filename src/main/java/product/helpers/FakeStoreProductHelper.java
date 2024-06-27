@@ -2,6 +2,7 @@ package product.helpers;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.transaction.Transactional;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -86,6 +87,7 @@ public class FakeStoreProductHelper {
         return objectMapper.readValue(responseBody, ProductDto.class);
     }
 
+    @Transactional
     private void saveProductAsync(Product product) {
         System.out.println("saving product Async --> ");
         CompletableFuture.runAsync(() -> {
@@ -95,7 +97,7 @@ public class FakeStoreProductHelper {
             return null;
         });
     }
-
+    @Transactional
     private void saveProductsAsync(List<Product> products) {
         System.out.println("saving list of products Async --> ");
         CompletableFuture.runAsync(() -> {

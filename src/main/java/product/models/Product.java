@@ -1,23 +1,30 @@
 package product.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
-@EqualsAndHashCode(callSuper=false)
-@Entity(name = "product")
-@PrimaryKeyJoinColumn(name = "base_table_id")
 @JsonIgnoreProperties
-public class Product extends Base {
+@Entity(name = "product")
+public class Product {
+    @Id
+    @JsonProperty("id")
+    @Column(name = "product_id")
+    long productId;
     String title;
     String price;
+    @Column(length = 1000)
     String description;
     @ManyToOne()
-    private Category category;
+    @JoinColumn(name = "category_id")
+    Category category;
 //    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
 //    List<Image> images;
 }

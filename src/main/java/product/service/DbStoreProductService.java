@@ -4,9 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import product.commons.ProductService;
 import product.dtos.ProductDto;
+import product.exceptions.ProductNotFoundException;
+import product.exceptions.ResponseBodyNullException;
 import product.helpers.DbStoreProductHelper;
-import product.helpers.FakeStoreProductHelper;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,12 +22,12 @@ public class DbStoreProductService implements ProductService {
         this.DbStoreProductHelper = Objects.requireNonNull(DbStoreProductHelper);
     }
 
-    public List<ProductDto> getAllProducts() {
+    public List<ProductDto> getAllProducts() throws Exception {
         return DbStoreProductHelper.getAllProducts();
     }
 
     @Override
-    public ProductDto getProductById(long id) throws Exception {
+    public ProductDto getProductById(long id) throws ProductNotFoundException, ResponseBodyNullException, IOException {
         return DbStoreProductHelper.getProductById(id);
     }
 

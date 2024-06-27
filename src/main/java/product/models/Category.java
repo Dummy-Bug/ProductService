@@ -10,15 +10,13 @@ import java.util.List;
 
 
 @Data
-@JsonIgnoreProperties
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity(name = "category")
-public class Category{
+public class Category {
     @Id
     @JsonProperty("id")
     @Column(name = "category_id")
     private long categoryId;
     private String title;
     private String image;
-    @OneToMany(mappedBy = "category")
-    private List<Product> products;
 }

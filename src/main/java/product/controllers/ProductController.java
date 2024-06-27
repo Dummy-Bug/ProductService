@@ -5,7 +5,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
 import product.commons.ProductService;
 import product.dtos.ProductDto;
+import product.exceptions.ProductNotFoundException;
+import product.exceptions.ResponseBodyNullException;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Objects;
 
@@ -16,7 +19,7 @@ public class ProductController {
     private final ProductService productService;
 
     @Autowired
-    public ProductController(@Qualifier("fakeStoreProductService") ProductService productService) {
+    public ProductController(@Qualifier("dbStoreProductService") ProductService productService) {
         this.productService = Objects.requireNonNull(productService);
     }
 
@@ -26,8 +29,13 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ProductDto getProductById(@PathVariable long id) throws Exception {
-        return productService.getProductById(id);
+    public ProductDto getProductById(@PathVariable long id) throws ProductNotFoundException, ResponseBodyNullException, IOException {
+        try {
+            return productService.getProductById(id);
+        } catch (ProductNotFoundException e) {
+            System.out.println(e.getMessage());
+            throw e;
+        }
     }
 
     @PostMapping(consumes = "application/json")

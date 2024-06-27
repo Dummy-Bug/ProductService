@@ -31,7 +31,7 @@ public class DbStoreProductService implements ProductService {
 
     @Override
     public ProductDto addProduct(ProductDto productDto) {
-        return null;
+        return DbStoreProductHelper.addProduct(productDto);
     }
 
     @Override

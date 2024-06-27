@@ -37,6 +37,10 @@ public class DbStoreProductHelper {
         return modelMapper.map(productRepository.findById(id), ProductDto.class);
     }
 
+    public ProductDto addProduct(ProductDto productdto) {
+        Product product = modelMapper.map(productdto, Product.class);
+        return modelMapper.map(productRepository.save(product),ProductDto.class);
+    }
     public ProductDto addProduct(Product product) {
         return modelMapper.map(productRepository.save(product),ProductDto.class);
     }

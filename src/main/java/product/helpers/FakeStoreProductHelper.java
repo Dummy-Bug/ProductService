@@ -60,7 +60,7 @@ public class FakeStoreProductHelper {
                 .collect(Collectors.toList());
 
         saveProductsAsync(products);
-
+        System.out.println("returning productList");
         return productDtos;
     }
 
@@ -82,6 +82,7 @@ public class FakeStoreProductHelper {
         Response response = okHttpClient.newCall(request).execute();
         String responseBody = getResponseBodyFromResponse(response);
         saveProductAsync(objectMapper.readValue(responseBody, Product.class));
+        System.out.println("returning product");
         return objectMapper.readValue(responseBody, ProductDto.class);
     }
 

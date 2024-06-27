@@ -1,0 +1,148 @@
+{
+  "main": {
+    "id": "bd0a0ee34d1b4d28",
+    "type": "split",
+    "children": [
+      {
+        "id": "e179e1f50d142a69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "36e21cdf77a79b21",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "765548a75aa2383a",
+    "type": "split",
+    "children": [
+      {
+        "id": "7a83ab3bb814dd69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60638471f8562969",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5177fea7ea645743",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "b934f71232419bc2",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "f6882e9878cb2e38",
+    "type": "split",
+    "children": [
+      {
+        "id": "109affcf7257146a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "98cfb20589c47518",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a9599dab84f5ded5",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a2f588d4a8f4b680",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8c4a79adf7d48e8c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "36e21cdf77a79b21",
+  "lastOpenFiles": [
+    "03 Dependency Injection.md",
+    "Welcome.md",
+    "Untitled.canvas",
+    "Untitled"
+  ]
+}

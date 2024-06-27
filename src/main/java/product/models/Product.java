@@ -20,11 +20,11 @@ public class Product {
     long productId;
     String title;
     String price;
+    List<String> images;
     @Column(length = 1000)
     String description;
+
     @ManyToOne()
     @JoinColumn(name = "category_id")
     Category category;
-//    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
-//    List<Image> images;
 }

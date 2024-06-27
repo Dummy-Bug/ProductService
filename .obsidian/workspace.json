@@ -1,14 +1,14 @@
 {
   "main": {
-    "id": "bd0a0ee34d1b4d28",
+    "id": "4a3f89a383dc5fbc",
     "type": "split",
     "children": [
       {
-        "id": "e179e1f50d142a69",
+        "id": "8f54b3626fa88f94",
         "type": "tabs",
         "children": [
           {
-            "id": "36e21cdf77a79b21",
+            "id": "b5e653e5487320cb",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -21,15 +21,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "765548a75aa2383a",
+    "id": "cd37ca57bedb71e0",
     "type": "split",
     "children": [
       {
-        "id": "7a83ab3bb814dd69",
+        "id": "d7b98917701112f2",
         "type": "tabs",
         "children": [
           {
-            "id": "60638471f8562969",
+            "id": "b255ce5f10163a04",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -39,7 +39,7 @@
             }
           },
           {
-            "id": "5177fea7ea645743",
+            "id": "0654bab85b663bce",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,7 +54,7 @@
             }
           },
           {
-            "id": "b934f71232419bc2",
+            "id": "a11bf563427d7bb4",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -68,15 +68,15 @@
     "width": 300
   },
   "right": {
-    "id": "f6882e9878cb2e38",
+    "id": "09f61371d7c9434e",
     "type": "split",
     "children": [
       {
-        "id": "109affcf7257146a",
+        "id": "c3c88b9a4dfac21b",
         "type": "tabs",
         "children": [
           {
-            "id": "98cfb20589c47518",
+            "id": "475bc9c115db7bdc",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -92,7 +92,7 @@
             }
           },
           {
-            "id": "a9599dab84f5ded5",
+            "id": "f20fb7b97e4f4ed5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -103,7 +103,7 @@
             }
           },
           {
-            "id": "a2f588d4a8f4b680",
+            "id": "627b74650d3252c8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -114,7 +114,7 @@
             }
           },
           {
-            "id": "8c4a79adf7d48e8c",
+            "id": "30371de9a8261f18",
             "type": "leaf",
             "state": {
               "type": "outline",
@@ -138,11 +138,6 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "36e21cdf77a79b21",
-  "lastOpenFiles": [
-    "03 Dependency Injection.md",
-    "Welcome.md",
-    "Untitled.canvas",
-    "Untitled"
-  ]
+  "active": "b5e653e5487320cb",
+  "lastOpenFiles": []
 }

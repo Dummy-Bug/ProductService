@@ -1,52 +1,39 @@
 {
   "main": {
-    "id": "fc9317862a5d0341",
+    "id": "138d137966b78bbf",
     "type": "split",
     "children": [
       {
-        "id": "ef800cfbd18ce61d",
+        "id": "2c5d8c61f83c2ce9",
         "type": "tabs",
         "children": [
           {
-            "id": "9a78856c6aca9ff8",
+            "id": "4fbb24d775265e3b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01 Controller.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6cacb94d01977d33",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "02 HTTP Methods.md",
-                "mode": "source",
+                "file": "03 Dependency Injection.md",
+                "mode": "preview",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "288dfedce30f1b58",
+    "id": "fc2df7feb2fbb813",
     "type": "split",
     "children": [
       {
-        "id": "5d049f7680918cd9",
+        "id": "8de3cade20ca5736",
         "type": "tabs",
         "children": [
           {
-            "id": "89e71da2e158d93c",
+            "id": "5d3c23f16bad476f",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,7 +43,7 @@
             }
           },
           {
-            "id": "3b44f04dd3d1a6f2",
+            "id": "b45b4184cb7fd0e6",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -71,7 +58,7 @@
             }
           },
           {
-            "id": "2391bf1c733e861d",
+            "id": "78d979b88ffa9639",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,23 +69,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 233.5
+    "width": 300
   },
   "right": {
-    "id": "f3feed782cdeda93",
+    "id": "8cdc70b402ef1c76",
     "type": "split",
     "children": [
       {
-        "id": "f02e7460c839246c",
+        "id": "f3f33a8ac63d9058",
         "type": "tabs",
         "children": [
           {
-            "id": "2ffa6161e272d8de",
+            "id": "e234454cb1a86d32",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "02 HTTP Methods.md",
+                "file": "03 Dependency Injection.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,19 +97,19 @@
             }
           },
           {
-            "id": "44fd26b3510df824",
+            "id": "f209cf74378eed6a",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "02 HTTP Methods.md",
+                "file": "03 Dependency Injection.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "f23b2804131b0645",
+            "id": "1a0e6de2952b46b6",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -133,12 +120,12 @@
             }
           },
           {
-            "id": "1fa36015e9c708cc",
+            "id": "7eb3ceb43df56cb5",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "02 HTTP Methods.md"
+                "file": "03 Dependency Injection.md"
               }
             }
           }
@@ -159,9 +146,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6cacb94d01977d33",
+  "active": "4fbb24d775265e3b",
   "lastOpenFiles": [
-    "01 Controller.md",
-    "02 HTTP Methods.md"
+    "02 HTTP Methods.md",
+    "01 Controller.md"
   ]
 }

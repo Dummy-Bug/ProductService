@@ -46,6 +46,7 @@ public class FakeStoreProductHelper {
     public List<ProductDto> getAllProducts() throws Exception {
         Request request = new Request.Builder()
                 .url(BASE_URL + GET_ALL_PRODUCTS_URL)
+                .get()
                 .build();
         System.out.println("API call --> " + request.url());
         Response response = okHttpClient.newCall(request).execute();

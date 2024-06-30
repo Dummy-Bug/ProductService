@@ -3,8 +3,10 @@ package product.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
+import product.commons.Auth;
 import product.commons.ProductService;
 import product.dtos.ProductDto;
+import product.dtos.UserDto;
 import product.exceptions.ProductNotFoundException;
 import product.exceptions.ResponseBodyNullException;
 
@@ -17,10 +19,12 @@ import java.util.Objects;
 public class ProductController {
 
     private final ProductService productService;
+    private final Auth auth;
 
     @Autowired
-    public ProductController(@Qualifier("dbStoreProductService") ProductService productService) {
+    public ProductController(@Qualifier("dbStoreProductService") ProductService productService, Auth auth) {
         this.productService = Objects.requireNonNull(productService);
+        this.auth = auth;
     }
 
     @GetMapping(produces = "application/json")
@@ -29,7 +33,13 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ProductDto getProductById(@PathVariable long id) throws ProductNotFoundException, ResponseBodyNullException, IOException {
+    public ProductDto getProductById(@PathVariable long id, @RequestHeader("authToken") String token) throws Exception {
+        UserDto userDto = auth.validateToken(token);
+        if (userDto == null) {
+            throw new Exception("Invalid token from User Service");
+        }
+        System.out.println("Email --> " + userDto.getEmail() +
+                "\t Name" + userDto.getName());
         try {
             return productService.getProductById(id);
         } catch (ProductNotFoundException e) {
